@@ -19,7 +19,7 @@ class CustomView: UIView {
     
 }
 
-
+//MARK: - custom for view
 @IBDesignable extension CustomView {
     /* The color of the shadow. Defaults to opaque black. Colors created
      * from patterns are currently NOT supported. Animatable. */
@@ -117,7 +117,7 @@ class CustomView: UIView {
 
 }
 
-
+//MARK: - custom for image view
 @IBDesignable extension CustomImageView {
     /* The color of the shadow. Defaults to opaque black. Colors created
      * from patterns are currently NOT supported. Animatable. */

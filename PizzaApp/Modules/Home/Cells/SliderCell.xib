@@ -49,6 +49,118 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSt-14-2kr" customClass="CustomView" customModule="PizzaApp" customModuleProvider="target">
+                        <rect key="frame" x="40" y="138" width="296" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuw-m4-2Ik" customClass="CustomImageView" customModule="PizzaApp" customModuleProvider="target">
+                                <rect key="frame" x="237" y="0.0" width="59" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDER NOW" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J34-WT-OXN">
+                                        <rect key="frame" x="4" y="22" width="51" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="J34-WT-OXN" secondAttribute="trailing" constant="4" id="80T-Qn-30o"/>
+                                    <constraint firstItem="J34-WT-OXN" firstAttribute="centerY" secondItem="fuw-m4-2Ik" secondAttribute="centerY" id="HF2-sI-5Mt"/>
+                                    <constraint firstItem="J34-WT-OXN" firstAttribute="leading" secondItem="fuw-m4-2Ik" secondAttribute="leading" constant="4" id="fDF-4q-gLB"/>
+                                    <constraint firstItem="J34-WT-OXN" firstAttribute="centerX" secondItem="fuw-m4-2Ik" secondAttribute="centerX" id="udo-2l-Vut"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="di2-5z-G11">
+                                <rect key="frame" x="15" y="10" width="132" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seafood Pesto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-8g-bWv">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtg-t8-UDn" customClass="RatingView" customModule="PizzaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="132" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="vnE-MA-A5g"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rzu-VE-ed0">
+                                        <rect key="frame" x="0.0" y="45" width="132" height="15"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-dz-hPx">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="15"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="pizza_icon" translatesAutoresizingMaskIntoConstraints="NO" id="00e-ZH-8y7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="15"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltX-ob-tbp">
+                                                        <rect key="frame" x="18" y="0.0" width="48" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TtG-Si-Aoe">
+                                                <rect key="frame" x="66" y="0.0" width="66" height="15"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="times_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iG7-AQ-lMV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="qCf-b6-Ng6"/>
+                                                            <constraint firstAttribute="width" constant="15" id="xcX-ph-AJz"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="20 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhF-yP-1te">
+                                                        <rect key="frame" x="20" y="0.0" width="46" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fuw-m4-2Ik" firstAttribute="leading" secondItem="di2-5z-G11" secondAttribute="trailing" constant="90" id="KKz-bW-hWC"/>
+                            <constraint firstItem="di2-5z-G11" firstAttribute="top" secondItem="vSt-14-2kr" secondAttribute="top" constant="10" id="MvF-nn-XTb"/>
+                            <constraint firstAttribute="height" constant="80" id="RIW-I9-nkw"/>
+                            <constraint firstItem="fuw-m4-2Ik" firstAttribute="top" secondItem="vSt-14-2kr" secondAttribute="top" id="kI3-NK-BAO"/>
+                            <constraint firstAttribute="trailing" secondItem="fuw-m4-2Ik" secondAttribute="trailing" id="ktB-N8-sXh"/>
+                            <constraint firstAttribute="bottom" secondItem="di2-5z-G11" secondAttribute="bottom" constant="10" id="oRM-ra-Hhw"/>
+                            <constraint firstAttribute="bottom" secondItem="fuw-m4-2Ik" secondAttribute="bottom" id="pRZ-Zb-ioQ"/>
+                            <constraint firstItem="fuw-m4-2Ik" firstAttribute="width" secondItem="vSt-14-2kr" secondAttribute="width" multiplier="0.2" id="yvP-uf-vOk"/>
+                            <constraint firstItem="di2-5z-G11" firstAttribute="leading" secondItem="vSt-14-2kr" secondAttribute="leading" constant="15" id="zGy-iC-lrQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.69999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +169,9 @@
                 <constraint firstAttribute="trailing" secondItem="LxW-L0-e7O" secondAttribute="trailing" constant="20" id="9yj-oc-P3a"/>
                 <constraint firstItem="LxW-L0-e7O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Bde-Ex-hjO"/>
                 <constraint firstItem="RzZ-Qi-sCO" firstAttribute="top" secondItem="LxW-L0-e7O" secondAttribute="top" id="Jxn-Ap-ClJ"/>
+                <constraint firstItem="vSt-14-2kr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="40" id="LRp-UR-4C0"/>
+                <constraint firstAttribute="trailing" secondItem="vSt-14-2kr" secondAttribute="trailing" constant="40" id="QLy-QY-bRl"/>
+                <constraint firstAttribute="bottom" secondItem="vSt-14-2kr" secondAttribute="bottom" constant="50" id="YlY-nS-JrF"/>
                 <constraint firstItem="LxW-L0-e7O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="h0e-Xk-Ty1"/>
                 <constraint firstItem="RzZ-Qi-sCO" firstAttribute="trailing" secondItem="LxW-L0-e7O" secondAttribute="trailing" id="knI-DV-7Ts"/>
                 <constraint firstAttribute="bottom" secondItem="LxW-L0-e7O" secondAttribute="bottom" constant="30" id="uWJ-Zv-VF0"/>
@@ -68,6 +183,8 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="pizza_icon" width="13" height="12"/>
         <image name="pizza_image" width="1000" height="667"/>
+        <image name="times_icon" width="59" height="59"/>
     </resources>
 </document>
