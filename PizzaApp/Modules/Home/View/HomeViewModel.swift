@@ -7,20 +7,21 @@
 //
 
 import Foundation
-
+import RxSwift
+import RxCocoa
 
 class HomeViewModel{
     private var sliderTimer: Timer?
-    private let slides = [1,2,3,4,5]
+    private let slides: BehaviorRelay<[Int]> = .init(value: [1,2,3,4,5])
     private var currentSlide = 0
     
     //MARK: - public Variables
     var numberOfItems: Int {
-        return slides.count
+        return slides.value.count
     }
     
     //MARK: - Outputs
-    var slideToNextItem: ((Int) -> Void)?
+    var slideToItem: PublishSubject<Int>?
     
     //MARK: - Inputs
     func viewDidLoad(){
@@ -29,7 +30,7 @@ class HomeViewModel{
     
     @objc func scrollToNextItem() {
         let nextCount = currentSlide + 1
-        currentSlide = nextCount % slides.count
-        slideToNextItem?(currentSlide)
+        currentSlide = nextCount % slides.value.count
+        slideToItem?.onNext(currentSlide)
     }
 }

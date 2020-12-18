@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8144822CD05A9084CB8773A4 /* Pods_PizzaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6815E4CC690C36D3A69AB9E2 /* Pods_PizzaApp.framework */; };
 		8661BA5F25476D4D003178B2 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661BA5E25476D4D003178B2 /* RatingView.swift */; };
 		86B0E9D725851CF000317A7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B0E9D625851CF000317A7B /* HomeViewModel.swift */; };
 		86B9DBFD2544D175000F1FC4 /* UICollectioView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C22AC1063C6485CB321DAA0 /* Pods-PizzaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaApp.release.xcconfig"; path = "Target Support Files/Pods-PizzaApp/Pods-PizzaApp.release.xcconfig"; sourceTree = "<group>"; };
+		6815E4CC690C36D3A69AB9E2 /* Pods_PizzaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D15D5AA9F955C57E17AFDAC /* Pods-PizzaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaApp.debug.xcconfig"; path = "Target Support Files/Pods-PizzaApp/Pods-PizzaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8661BA5E25476D4D003178B2 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		86B0E9D625851CF000317A7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectioView+Extensions.swift"; sourceTree = "<group>"; };
@@ -43,12 +47,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8144822CD05A9084CB8773A4 /* Pods_PizzaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45FE3883C28296FAE60F7001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6815E4CC690C36D3A69AB9E2 /* Pods_PizzaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ACA64DB57C030B04B9DE5F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D15D5AA9F955C57E17AFDAC /* Pods-PizzaApp.debug.xcconfig */,
+				3C22AC1063C6485CB321DAA0 /* Pods-PizzaApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8661BA5B25476D1C003178B2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +125,8 @@
 			children = (
 				86F1684B2544A7AD00873F69 /* PizzaApp */,
 				86F1684A2544A7AD00873F69 /* Products */,
+				7ACA64DB57C030B04B9DE5F1 /* Pods */,
+				45FE3883C28296FAE60F7001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86F1685D2544A7AE00873F69 /* Build configuration list for PBXNativeTarget "PizzaApp" */;
 			buildPhases = (
+				01C83E3B079475CBEC2C1C62 /* [CP] Check Pods Manifest.lock */,
 				86F168452544A7AD00873F69 /* Sources */,
 				86F168462544A7AD00873F69 /* Frameworks */,
 				86F168472544A7AD00873F69 /* Resources */,
+				88BF7A6CEA9A7D81701731E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +266,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01C83E3B079475CBEC2C1C62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizzaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88BF7A6CEA9A7D81701731E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaApp/Pods-PizzaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaApp/Pods-PizzaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PizzaApp/Pods-PizzaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86F168452544A7AD00873F69 /* Sources */ = {
@@ -386,6 +455,7 @@
 		};
 		86F1685E2544A7AE00873F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D15D5AA9F955C57E17AFDAC /* Pods-PizzaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -405,6 +475,7 @@
 		};
 		86F1685F2544A7AE00873F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C22AC1063C6485CB321DAA0 /* Pods-PizzaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

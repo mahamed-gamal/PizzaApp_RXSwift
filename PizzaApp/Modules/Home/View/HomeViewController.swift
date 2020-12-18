@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
     //MARK: - Outlets
@@ -14,6 +16,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Properties
     let viewModel = HomeViewModel()
+    let disposeBag = DisposeBag()
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +27,9 @@ class HomeViewController: UIViewController {
     }
     
     func bind() {
-        viewModel.slideToNextItem = { [weak self] index in
+        viewModel.slideToItem?.subscribe(onNext: { [weak self] (index) in
             self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
-        }
+            }).disposed(by: disposeBag)
     }
     
     private func setupUI() {
