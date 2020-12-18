@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8661BA5F25476D4D003178B2 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661BA5E25476D4D003178B2 /* RatingView.swift */; };
+		86B0E9D725851CF000317A7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B0E9D625851CF000317A7B /* HomeViewModel.swift */; };
 		86B9DBFD2544D175000F1FC4 /* UICollectioView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */; };
 		86B9DBFF2544D394000F1FC4 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DBFE2544D394000F1FC4 /* UITableView+Extensions.swift */; };
 		86B9DC032544D56E000F1FC4 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DC022544D56E000F1FC4 /* CustomView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		8661BA5E25476D4D003178B2 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		86B0E9D625851CF000317A7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectioView+Extensions.swift"; sourceTree = "<group>"; };
 		86B9DBFE2544D394000F1FC4 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		86B9DC022544D56E000F1FC4 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				86F168622544A96400873F69 /* HomeViewController.swift */,
 				86F168632544A96400873F69 /* HomeViewController.xib */,
+				86B0E9D625851CF000317A7B /* HomeViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				86B9DBFF2544D394000F1FC4 /* UITableView+Extensions.swift in Sources */,
 				86F1684D2544A7AD00873F69 /* AppDelegate.swift in Sources */,
 				86F1686C2544C65C00873F69 /* SliderCell.swift in Sources */,
+				86B0E9D725851CF000317A7B /* HomeViewModel.swift in Sources */,
 				86B9DC032544D56E000F1FC4 /* CustomView.swift in Sources */,
 				86B9DBFD2544D175000F1FC4 /* UICollectioView+Extensions.swift in Sources */,
 				86F168642544A96400873F69 /* HomeViewController.swift in Sources */,
