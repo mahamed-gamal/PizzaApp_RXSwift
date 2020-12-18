@@ -13,7 +13,7 @@ import RxCocoa
 class HomeViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-    
+    @IBOutlet weak var popularTableView: UITableView!
     //MARK: - Properties
     let viewModel = HomeViewModel()
     let disposeBag = DisposeBag()
@@ -21,7 +21,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupPopularTableView()
         registerCells()
+        popularTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         bind()
         viewModel.viewDidLoad()
     }
@@ -37,8 +39,19 @@ class HomeViewController: UIViewController {
         sliderCollectionView.dataSource = self
     }
     
+    private func setupPopularTableView() {
+        popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        viewModel.productItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing: PopularCell.self), cellType: PopularCell.self)){ index, model, cell in
+            
+            
+        }.disposed(by: disposeBag)
+        
+    }
+    
     private func registerCells() {
         sliderCollectionView.registerCell(cellClass: SliderCell.self)
+        popularTableView.registerCellNib(cellClass: PopularCell.self)
     }
 }
 

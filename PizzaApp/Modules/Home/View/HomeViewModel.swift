@@ -12,7 +12,8 @@ import RxCocoa
 
 class HomeViewModel{
     private var sliderTimer: Timer?
-    private let slides: BehaviorRelay<[Int]> = .init(value: [1,2,3,4,5])
+    let slides: BehaviorRelay<[Int]> = .init(value: [1,2,3,4,5])
+    let productItems: BehaviorRelay<[Product]> = .init(value: [.init(title: "Text"),.init(title: "Text"),.init(title: "Text"),.init(title: "Text"),.init(title: "Text")])
     private var currentSlide = 0
     
     //MARK: - public Variables

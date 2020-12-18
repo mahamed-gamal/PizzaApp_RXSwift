@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8144822CD05A9084CB8773A4 /* Pods_PizzaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6815E4CC690C36D3A69AB9E2 /* Pods_PizzaApp.framework */; };
+		864AF3EC258CF9C8005173E6 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AF3EA258CF9C8005173E6 /* PopularCell.swift */; };
+		864AF3ED258CF9C8005173E6 /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864AF3EB258CF9C8005173E6 /* PopularCell.xib */; };
+		864AF3F0258D02A6005173E6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AF3EF258D02A6005173E6 /* Product.swift */; };
+		864AF3F3258D136D005173E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AF3F2258D136D005173E6 /* CustomTabBarController.swift */; };
+		864AF3F5258D20E7005173E6 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864AF3F4258D20E7005173E6 /* CustomTabBar.swift */; };
 		8661BA5F25476D4D003178B2 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8661BA5E25476D4D003178B2 /* RatingView.swift */; };
 		86B0E9D725851CF000317A7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B0E9D625851CF000317A7B /* HomeViewModel.swift */; };
+		86B89C11258D49B10018141C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B89C10258D49B10018141C /* UIColor+Extensions.swift */; };
 		86B9DBFD2544D175000F1FC4 /* UICollectioView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */; };
 		86B9DBFF2544D394000F1FC4 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DBFE2544D394000F1FC4 /* UITableView+Extensions.swift */; };
 		86B9DC032544D56E000F1FC4 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B9DC022544D56E000F1FC4 /* CustomView.swift */; };
@@ -26,8 +32,14 @@
 		3C22AC1063C6485CB321DAA0 /* Pods-PizzaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaApp.release.xcconfig"; path = "Target Support Files/Pods-PizzaApp/Pods-PizzaApp.release.xcconfig"; sourceTree = "<group>"; };
 		6815E4CC690C36D3A69AB9E2 /* Pods_PizzaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D15D5AA9F955C57E17AFDAC /* Pods-PizzaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaApp.debug.xcconfig"; path = "Target Support Files/Pods-PizzaApp/Pods-PizzaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		864AF3EA258CF9C8005173E6 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		864AF3EB258CF9C8005173E6 /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
+		864AF3EF258D02A6005173E6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		864AF3F2258D136D005173E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		864AF3F4258D20E7005173E6 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8661BA5E25476D4D003178B2 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		86B0E9D625851CF000317A7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		86B89C10258D49B10018141C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectioView+Extensions.swift"; sourceTree = "<group>"; };
 		86B9DBFE2544D394000F1FC4 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		86B9DC022544D56E000F1FC4 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
@@ -68,8 +80,24 @@
 				6D15D5AA9F955C57E17AFDAC /* Pods-PizzaApp.debug.xcconfig */,
 				3C22AC1063C6485CB321DAA0 /* Pods-PizzaApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		864AF3EE258D0293005173E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				864AF3EF258D02A6005173E6 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		864AF3F1258D1343005173E6 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				864AF3F2258D136D005173E6 /* CustomTabBarController.swift */,
+				864AF3F4258D20E7005173E6 /* CustomTabBar.swift */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 		8661BA5B25476D1C003178B2 /* Core */ = {
@@ -101,6 +129,7 @@
 			children = (
 				86B9DBFC2544D175000F1FC4 /* UICollectioView+Extensions.swift */,
 				86B9DBFE2544D394000F1FC4 /* UITableView+Extensions.swift */,
+				86B89C10258D49B10018141C /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +145,7 @@
 		86B9DC012544D555000F1FC4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				864AF3F1258D1343005173E6 /* CustomTabBar */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -141,6 +171,7 @@
 		86F1684B2544A7AD00873F69 /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
+				864AF3EE258D0293005173E6 /* Model */,
 				8661BA5B25476D1C003178B2 /* Core */,
 				86B9DC012544D555000F1FC4 /* Utilities */,
 				86B9DC002544D549000F1FC4 /* Common */,
@@ -194,6 +225,8 @@
 			children = (
 				86F1686A2544C65C00873F69 /* SliderCell.swift */,
 				86F1686B2544C65C00873F69 /* SliderCell.xib */,
+				864AF3EA258CF9C8005173E6 /* PopularCell.swift */,
+				864AF3EB258CF9C8005173E6 /* PopularCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -260,6 +293,7 @@
 			files = (
 				86F168592544A7AE00873F69 /* LaunchScreen.storyboard in Resources */,
 				86F168562544A7AE00873F69 /* Assets.xcassets in Resources */,
+				864AF3ED258CF9C8005173E6 /* PopularCell.xib in Resources */,
 				86F1686D2544C65C00873F69 /* SliderCell.xib in Resources */,
 				86F168652544A96400873F69 /* HomeViewController.xib in Resources */,
 			);
@@ -317,9 +351,14 @@
 				86B9DBFF2544D394000F1FC4 /* UITableView+Extensions.swift in Sources */,
 				86F1684D2544A7AD00873F69 /* AppDelegate.swift in Sources */,
 				86F1686C2544C65C00873F69 /* SliderCell.swift in Sources */,
+				86B89C11258D49B10018141C /* UIColor+Extensions.swift in Sources */,
 				86B0E9D725851CF000317A7B /* HomeViewModel.swift in Sources */,
+				864AF3F5258D20E7005173E6 /* CustomTabBar.swift in Sources */,
 				86B9DC032544D56E000F1FC4 /* CustomView.swift in Sources */,
+				864AF3F3258D136D005173E6 /* CustomTabBarController.swift in Sources */,
 				86B9DBFD2544D175000F1FC4 /* UICollectioView+Extensions.swift in Sources */,
+				864AF3EC258CF9C8005173E6 /* PopularCell.swift in Sources */,
+				864AF3F0258D02A6005173E6 /* Product.swift in Sources */,
 				86F168642544A96400873F69 /* HomeViewController.swift in Sources */,
 				8661BA5F25476D4D003178B2 /* RatingView.swift in Sources */,
 			);

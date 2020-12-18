@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="PizzaApp" customModuleProvider="target">
             <connections>
+                <outlet property="popularTableView" destination="JdG-gq-bhI" id="dwd-Jo-W2i"/>
                 <outlet property="sliderCollectionView" destination="Fb8-M4-Teh" id="VUb-V4-bgh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,12 +29,9 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fb8-M4-Teh">
-                    <rect key="frame" x="0.0" y="130.5" width="414" height="280"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fb8-M4-Teh">
+                    <rect key="frame" x="0.0" y="130.5" width="414" height="245.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="280" id="OPl-XB-lKS"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glt-iy-j0H">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -41,17 +39,26 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JdG-gq-bhI">
+                    <rect key="frame" x="0.0" y="376" width="414" height="486"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JdG-gq-bhI" secondAttribute="trailing" id="FUE-se-W6h"/>
                 <constraint firstItem="Kt7-tV-Yea" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="H1C-sc-1ma"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fb8-M4-Teh" secondAttribute="trailing" id="Ith-aP-Icr"/>
                 <constraint firstItem="RFd-0Y-y9U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KQm-2N-qBd"/>
+                <constraint firstItem="Fb8-M4-Teh" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.3" id="T1A-S7-rKS"/>
                 <constraint firstItem="Kt7-tV-Yea" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wj0-sY-UEd"/>
                 <constraint firstItem="RFd-0Y-y9U" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="bH3-b2-DBS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JdG-gq-bhI" secondAttribute="bottom" id="dXL-Gf-0S4"/>
                 <constraint firstItem="Fb8-M4-Teh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f3I-lq-KuQ"/>
+                <constraint firstItem="JdG-gq-bhI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gFy-4y-NOb"/>
                 <constraint firstItem="Fb8-M4-Teh" firstAttribute="top" secondItem="Kt7-tV-Yea" secondAttribute="bottom" constant="30" id="lbj-gh-An0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RFd-0Y-y9U" secondAttribute="trailing" id="t32-FB-KY2"/>
+                <constraint firstItem="JdG-gq-bhI" firstAttribute="top" secondItem="Fb8-M4-Teh" secondAttribute="bottom" id="tie-Y4-aeB"/>
                 <constraint firstItem="RFd-0Y-y9U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xHO-Yf-fEe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
