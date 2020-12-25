@@ -11,13 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var coordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let initialViewController = CustomTabBarController()
-        window = UIWindow()
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+        coordinator = AppCoordinator()
+        coordinator.start()
         return true
     }
 

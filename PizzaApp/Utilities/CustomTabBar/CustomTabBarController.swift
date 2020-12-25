@@ -9,6 +9,15 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
+    var coordinator: Coordinator
+    
+    init(coordinator: Coordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     
     enum TabBarItems:Int, CaseIterable {
         case Home
@@ -50,24 +59,33 @@ class CustomTabBarController: UITabBarController {
         tabBar.tintColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         tabBar.unselectedItemTintColor = .red
         tabBar.items?[TabBarItems.PizzaMaker.rawValue].isEnabled = false
+        middleButton.addTarget(self, action: #selector(didPressMiddleButton), for: .touchUpInside)
+    }
+    
+    @objc func didPressMiddleButton() {
+        print("pressed middle button")
     }
     
     private func setupTabBarItems() {
-        self.viewControllers = TabBarItems.allCases.map({return viewControllerForTabBar(_item: $0)})
+        self.viewControllers = TabBarItems.allCases.map({
+            let view = viewControllerForTabBar(_item: $0)
+            let navigation = UINavigationController(rootViewController: view)
+            navigation.navigationBar.barTintColor = UIColor.darkBlueGrey
+            return navigation})
     }
     
     func viewControllerForTabBar(_item: TabBarItems) -> UIViewController {
         switch _item {
         case .Home:
-            let view = HomeViewController()
+             let view = coordinator.Main.viewController(for: .home)
             view.tabBarItem = tabBarItem(for: .Home)
             return view
         case .PizzaMaker:
-            let view = HomeViewController()
+            let view = UIViewController()
             view.tabBarItem = tabBarItem(for: .PizzaMaker)
             return view
         case .Cart:
-            let view = HomeViewController()
+            let view = coordinator.Main.viewController(for: .home)
             view.tabBarItem = tabBarItem(for: .Cart)
             return view
         }

@@ -10,13 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseWireFrame<HomeViewModel> {
     //MARK: - Outlets
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var popularTableView: UITableView!
     //MARK: - Properties
-    let viewModel = HomeViewModel()
-    let disposeBag = DisposeBag()
+    //let viewModel = HomeViewModel()
+    //let disposeBag = DisposeBag()
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +24,13 @@ class HomeViewController: UIViewController {
         setupPopularTableView()
         registerCells()
         popularTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        bind()
         viewModel.viewDidLoad()
     }
     
-    func bind() {
+    override func bind(viewModel: HomeViewModel) {
         viewModel.slideToItem?.subscribe(onNext: { [weak self] (index) in
-            self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
-            }).disposed(by: disposeBag)
+        self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
+        }).disposed(by: disposeBag)
     }
     
     private func setupUI() {
